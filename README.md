@@ -1,25 +1,22 @@
 ## Dialogflow Gateway HTTP API
-A simple python-based open source implementation of dialogflow-gateway HTTP API for Dialogflow.  
-Originally developed to work with [Dialogflow Web UI](https://github.com/narVidhai/Dialogflow-Web-Chatbot-UI).
+This application can easily create a backend application for your Dialogflow chatobt by easily connecting through JSON file. 
 
 ### Requirements
 - Python>=3.7
 - `pip install -r requirements.txt`
 - Setup the credentials in `main.py`
 
-### Deployment
+### Deployment On GCP
+1. Download and configure Google CLoud SDK.
+2. Setup and configure your GCP account
+3. Create a new project on your GCP App Engine
+4. Run gcloud configset project project_name
+5. Run gcloud app deploy app.yaml
+6. Now put this undex the Index.js under SCR folder(Find this under the Dialogflow-custom-UI project hosted on my Github ID)
+7. Now open the custom UI in VIsual COde and open terminal
+8. Run <i>npm run build </i>
 
-#### Serving locally
-1. Run the server: `python main.py`
-2. Expose it to Internet. (Example: `ngrok http 8000`)
 
-#### Hosting on GCP App Engine
-0. Optional: `gcloud app create` (Only do this unless there's no default service)
-1. `gcloud app deploy app.yaml` (Set the `service` paramter in `app.yaml` to deploy in addition to the default service)
 
-You can now use the deployed server as the `API_URL` for the [Web UI](https://github.com/narVidhai/Dialogflow-Web-Chatbot-UI).
-
-### HTTP Endpoints
-
-- To retrieve agent details: `/get_dialogflow_agent` ([Request-Response Format](https://github.com/mishushakov/dialogflow-gateway-docs#retrieving-agents))
-- To get Dialogflow response for a query: `/detect_intent` ([Request-Response Format](https://github.com/mishushakov/dialogflow-gateway-docs#detecting-intents))
+###This code runs best with Dialogflow-custom-UI provided on my Gihub ID. 
+Follow the instructions mentioned there to run the code successfully. 
